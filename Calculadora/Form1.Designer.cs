@@ -47,6 +47,7 @@
             btnDivisao = new Button();
             btnAlteraSinal = new Button();
             txtResultado = new TextBox();
+            lblHistorico = new Label();
             SuspendLayout();
             // 
             // btnZero
@@ -71,6 +72,7 @@
             btnPonto.TabIndex = 2;
             btnPonto.Text = ".";
             btnPonto.UseVisualStyleBackColor = false;
+            btnPonto.Click += btnPonto_Click;
             // 
             // btnIgual
             // 
@@ -82,6 +84,7 @@
             btnIgual.TabIndex = 3;
             btnIgual.Text = "=";
             btnIgual.UseVisualStyleBackColor = false;
+            btnIgual.Click += btnIgual_Click;
             // 
             // btnSoma
             // 
@@ -93,6 +96,7 @@
             btnSoma.TabIndex = 7;
             btnSoma.Text = "+";
             btnSoma.UseVisualStyleBackColor = false;
+            btnSoma.Click += btnSoma_Click;
             // 
             // btnTres
             // 
@@ -140,6 +144,7 @@
             btnSubtracao.TabIndex = 11;
             btnSubtracao.Text = "-";
             btnSubtracao.UseVisualStyleBackColor = false;
+            btnSubtracao.Click += btnSubtracao_Click;
             // 
             // btnSeis
             // 
@@ -187,6 +192,7 @@
             btnMultiplicacao.TabIndex = 15;
             btnMultiplicacao.Text = "x";
             btnMultiplicacao.UseVisualStyleBackColor = false;
+            btnMultiplicacao.Click += btnMultiplicacao_Click;
             // 
             // btnNove
             // 
@@ -246,6 +252,7 @@
             btnDivisao.TabIndex = 17;
             btnDivisao.Text = "÷";
             btnDivisao.UseVisualStyleBackColor = false;
+            btnDivisao.Click += btnDivisao_Click;
             // 
             // btnAlteraSinal
             // 
@@ -257,22 +264,34 @@
             btnAlteraSinal.TabIndex = 18;
             btnAlteraSinal.Text = "+ / -";
             btnAlteraSinal.UseVisualStyleBackColor = false;
+            btnAlteraSinal.Click += btnAlteraSinal_Click;
             // 
             // txtResultado
             // 
             txtResultado.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            txtResultado.Location = new Point(40, 39);
+            txtResultado.Location = new Point(40, 73);
             txtResultado.Name = "txtResultado";
             txtResultado.Size = new Size(298, 34);
             txtResultado.TabIndex = 19;
             txtResultado.Text = "0";
             txtResultado.TextAlign = HorizontalAlignment.Right;
             // 
+            // lblHistorico
+            // 
+            lblHistorico.AutoSize = true;
+            lblHistorico.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            lblHistorico.ForeColor = Color.Navy;
+            lblHistorico.Location = new Point(40, 31);
+            lblHistorico.Name = "lblHistorico";
+            lblHistorico.Size = new Size(0, 28);
+            lblHistorico.TabIndex = 20;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(384, 561);
+            Controls.Add(lblHistorico);
             Controls.Add(txtResultado);
             Controls.Add(btnAlteraSinal);
             Controls.Add(btnDivisao);
@@ -319,5 +338,6 @@
         private Button btnDivisao;
         private Button btnAlteraSinal;
         private TextBox txtResultado;
+        private Label lblHistorico;
     }
 }
