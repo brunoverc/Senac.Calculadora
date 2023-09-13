@@ -4,7 +4,7 @@ namespace Calculadora
     {
         //Sempre que tivermos a variável seguida de ? quer dizer que ela aceita null
         decimal numero1, numero2;
-        string operacao = " ";
+        string operacao = "";
         public Form1()
         {
             InitializeComponent();
